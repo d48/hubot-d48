@@ -1,1 +1,1 @@
-web: bin/hubot -a talker
+web: bin/hubot -a talker -n horsie
