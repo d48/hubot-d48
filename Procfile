@@ -1,1 +1,1 @@
-web: bin/hubot -a talker -n Hubot
+web: bin/hubot -a talker
