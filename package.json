@@ -20,7 +20,10 @@
     "optparse":      "1.0.3",
     "hubot-talker":  ">= 1.0.1",
     "jsdom":         "*",
-    "jquery":        "*"
+    "jquery":        "*",
+    "htmlparser": "1.7.6",
+    "soupselect": "0.2.0",
+    "cleverbot-node": "0.1.1"
   },
 
   "engines": {
