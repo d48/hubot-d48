@@ -3,6 +3,7 @@
 #
 # Commands:
 #   hubot tt me <url> - Gets turntable url saved 
+#   hubot tt save <url> - Gets turntable url saved 
 
 request = require('request')
 
@@ -11,10 +12,9 @@ module.exports = (robot) ->
     ttMe '', (url) ->
       msg.send "tt url is: #{url}"
 
-  # robot.respond /(tt|turntable) save (http:\/\/turntable.fm\/.*)/i, (msg) ->
-  robot.hear /(http:\/\/turntable.fm\/.*)/i, (msg) ->
-    ttMe msg.match, (url) ->
-      msg.send "tt url saved."
+  robot.respond /(tt|turntable) save (http:\/\/(www.)?turntable.fm\/.*)/i, (msg) ->
+    ttMe msg.match[2], (url) ->
+      msg.send "tt url has been saved"
 
 ttMe = (query, cb) ->
   options = 
