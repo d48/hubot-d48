@@ -1,9 +1,9 @@
 # Description:
-#   A way to get the last Turntable link posted
+#   A way to get/set turntable.fm link
 #
 # Commands:
-#   hubot tt me <url> - Gets turntable url saved 
-#   hubot tt save <url> - Gets turntable url saved 
+#   hubot tt me <url> - Gets turntable.fm url saved 
+#   hubot tt save <url> - Saves turntable.fm url
 
 request = require('request')
 
