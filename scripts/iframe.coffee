@@ -16,7 +16,10 @@ module.exports = (robot) ->
 
 iframeMe = (params, cb) ->
   parts = params.split " "
-  htmlStart = "<iframe src=\"#{parts[0]}\""
+
+  url = if parts[0].indexOf('http') < 0 then 'http://' + parts[0] else parts[0]
+
+  htmlStart = "<iframe src=\"#{url}\""
   htmlEnd = "</iframe>"
 
   if not parts[1]? and not parts[2]?
