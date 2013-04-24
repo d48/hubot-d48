@@ -34,5 +34,4 @@ module.exports = (robot) ->
 
 broMe = (cb) ->
   brocab (dict) ->
-    broism = dict.random()
-    cb broism
+    cb dict.random()
