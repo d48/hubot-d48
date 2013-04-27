@@ -5,7 +5,7 @@
 #   None
 #
 # Configuration:
-#   robotUser = your robot's name to ignore hearing messages from it
+#   robotUsername = your robot's name to ignore hearing messages from it
 #
 # Commands:
 #   beer - replies with random beer quote
