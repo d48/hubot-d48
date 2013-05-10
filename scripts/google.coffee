@@ -14,7 +14,7 @@
 #   searls
 
 module.exports = (robot) ->
-  robot.respond /(google)( me)? (.*)/i, (msg) ->
+  robot.respond /(google|tell|get|find|search)( me)? (.*)/i, (msg) ->
     googleMe msg, msg.match[3], (url) ->
       msg.send url
 
