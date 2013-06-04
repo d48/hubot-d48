@@ -15,5 +15,5 @@
 
 module.exports = (robot) ->
   robot.respond /decide "(.*)"/i, (msg) ->
-    options = msg.match[1].split('" "')
+    options = msg.match[1].split(' ' || " ")
     msg.send "Definitely #{ msg.random options }"
