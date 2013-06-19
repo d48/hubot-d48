@@ -18,7 +18,7 @@
     "hubot":         ">=2.4.8",
     "hubot-scripts": ">= 2.4.1",
     "optparse":      "1.0.3",
-    "hubot-talker":  ">= 1.0.1",
+    "hubot-talker":  "https://github.com/d48/hubot-talker/tarball/master",
     "jsdom":         "*",
     "jquery":        "*",
     "htmlparser":    "1.7.6",
