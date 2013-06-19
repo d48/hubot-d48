@@ -15,10 +15,10 @@
   },
 
   "dependencies": {
-    "hubot":         ">=2.4.8",
+    "hubot":         "2.5.1",
     "hubot-scripts": ">= 2.4.1",
     "optparse":      "1.0.3",
-    "hubot-talker":  "https://github.com/d48/hubot-talker/tarball/master",
+    "hubot-talker":  "*",
     "jsdom":         "*",
     "jquery":        "*",
     "htmlparser":    "1.7.6",
