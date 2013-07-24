@@ -1,36 +1,36 @@
 {
-  "name":        "hosted-hubot",
-  "version":     "2.4.8",
-  "author":      "GitHub Inc.",
-  "keywords":    "github hubot campfire bot",
+  "name": "hosted-hubot",
+  "version": "2.4.8",
+  "author": "GitHub Inc.",
+  "keywords": "github hubot campfire bot",
   "description": "A simple helpful Robot for your Company",
-  "licenses":     [{
-    "type":       "MIT",
-    "url":        "http://github.com/github/hubot/raw/master/LICENSE"
-  }],
-
-  "repository" : {
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/github/hubot/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
     "type": "git",
-    "url":  "https://github.com/github/hubot.git"
+    "url": "https://github.com/github/hubot.git"
   },
-
   "dependencies": {
-    "hubot":         "2.5.1",
+    "hubot": "2.5.1",
     "hubot-scripts": ">= 2.4.1",
-    "optparse":      "1.0.3",
-    "hubot-talker":  "*",
-    "jsdom":         "*",
-    "jquery":        "*",
-    "htmlparser":    "1.7.6",
-    "soupselect":    "0.2.0",
-    "cleverbot-node":"0.1.1",
-    "request":       "*",
-    "brocabulary":       "*",
-    "ntwitter": "*"
+    "optparse": "1.0.3",
+    "hubot-talker": "*",
+    "jsdom": "*",
+    "jquery": "*",
+    "htmlparser": "1.7.6",
+    "soupselect": "0.2.0",
+    "cleverbot-node": "0.1.1",
+    "request": "*",
+    "brocabulary": "*",
+    "ntwitter": "*",
+    "listenshtein": "0.0.0"
   },
-
   "engines": {
     "node": "0.8.14",
-    "npm":  ">=1.1.x"
+    "npm": ">=1.1.x"
   }
 }

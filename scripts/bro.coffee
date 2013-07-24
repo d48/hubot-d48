@@ -9,6 +9,7 @@
 #
 # Commands:
 #   bro me - Returns random string with bro
+#   broify <string> - Returns a broified string using listenshtein algorithm
 #
 # Author:
 #   d48 
@@ -32,6 +33,15 @@ module.exports = (robot) ->
     broMe (broism) ->
       msg.send prefix + " " + broism
 
+  robot.respond /broify (.*)/i, (msg) ->
+    broify msg.match[1], (broism) ->
+      msg.send broism
+
+
 broMe = (cb) ->
   brocab (dict) ->
     cb dict.random()
+
+broify = (str, cb) ->
+  brocab (dict) ->
+    cb dict.broify(str)
