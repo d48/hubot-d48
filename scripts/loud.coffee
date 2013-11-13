@@ -21,6 +21,10 @@ ntwitter = require 'ntwitter'
 inspect = require('util').inspect
 
 
+# return random number in range suuplied
+getRandom = (number) ->
+  Math.floor(Math.random() * number) + 1
+
 module.exports = (robot) ->
   auth =
     consumer_key: process.env.HUBOT_TWITTER_CONSUMER_KEY
@@ -28,9 +32,9 @@ module.exports = (robot) ->
     access_token_key: process.env.HUBOT_TWITTER_ACCESS_TOKEN_KEY
     access_token_secret: process.env.HUBOT_TWITTER_ACCESS_TOKEN_SECRET
 
+
   twit = undefined
   myRobot = process.env.HUBOT_NAME 
-  num = null
 
   robot.hear /(^[^a-z]*$)/, (msg) ->
     unless auth.consumer_key
@@ -61,12 +65,12 @@ module.exports = (robot) ->
             return
 
           if data
-            num = Math.floor(Math.random() * 15) + 1
+            num = getRandom(15)
             robot.brain.data.statuses = data
             robot.brain.emit 'save'
             msg.send data[num].text
 
       else
-        num = Math.floor(Math.random() * 15) + 1
+        num = getRandom(15)
         stats = robot.brain.data.statuses
         msg.send stats[num].text
