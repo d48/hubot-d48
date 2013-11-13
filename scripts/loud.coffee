@@ -31,7 +31,8 @@ module.exports = (robot) ->
   twit = undefined
   myRobot = process.env.HUBOT_NAME 
 
-  robot.hear /(^[^a-z]*$)/, (msg) ->
+  # robot.hear /(^[^a-z]*$)/, (msg) ->
+  robot.hear /(kaya)/, (msg) ->
     unless auth.consumer_key
       msg.send "Please set the HUBOT_TWITTER_CONSUMER_KEY environment variable."
       return
@@ -55,7 +56,6 @@ module.exports = (robot) ->
         return
 
       if not robot.brain.data.statuses?
-        msg.send 'getting timeline'
         twit.getUserTimeline {'screen_name':'loudbot', 'count': '15'}, (err, data) ->
           if err
             msg.send "Encountered a problem twitter searching :(", inspect err
@@ -67,5 +67,4 @@ module.exports = (robot) ->
             msg.send data[num].text
 
       else
-        msg.send 'tapping into the brain'
-        msg.send msg.random robot.brain.data.statuses
+        msg.send msg.random robot.brain.data.statuses[num].text
