@@ -30,6 +30,7 @@ module.exports = (robot) ->
 
   twit = undefined
   myRobot = process.env.HUBOT_NAME 
+  num = null
 
   # robot.hear /(^[^a-z]*$)/, (msg) ->
   robot.hear /(kaya)/, (msg) ->
@@ -49,7 +50,6 @@ module.exports = (robot) ->
     twit ?= new ntwitter auth
 
     twit.verifyCredentials (err, data) ->
-      num = Math.floor(Math.random() * 15) + 1
 
       if err
         msg.send "Encountered a problem verifying twitter credentials :(", inspect err
@@ -62,9 +62,12 @@ module.exports = (robot) ->
             return
 
           if data
+            num = Math.floor(Math.random() * 15) + 1
             robot.brain.data.statuses = data
             robot.brain.emit 'save'
             msg.send data[num].text
 
       else
-        msg.send msg.random robot.brain.data.statuses[num].text
+        num = Math.floor(Math.random() * 15) + 1
+        stats = robot.brain.data.statuses
+        msg.send stats[num].text
