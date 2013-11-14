@@ -66,7 +66,6 @@ module.exports = (robot) ->
 
           if data
             num = getRandom(15)
-            msg.send '/me is updating the brain'
             robot.brain.data.statuses = data
             robot.brain.emit 'save'
             msg.send data[num].text
