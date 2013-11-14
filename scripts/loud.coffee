@@ -25,6 +25,9 @@ inspect = require('util').inspect
 getRandom = (number) ->
   Math.floor(Math.random() * number) + 1
 
+# set range for tweets
+count = 15
+
 module.exports = (robot) ->
   auth =
     consumer_key: process.env.HUBOT_TWITTER_CONSUMER_KEY
@@ -36,7 +39,7 @@ module.exports = (robot) ->
   twit = undefined
   myRobot = process.env.HUBOT_NAME 
 
-  robot.hear /(^[^a-z]*$)/, (msg) ->
+  robot.hear /(^[A-Z]*$)/, (msg) ->
     unless auth.consumer_key
       msg.send "Please set the HUBOT_TWITTER_CONSUMER_KEY environment variable."
       return
@@ -59,18 +62,20 @@ module.exports = (robot) ->
         return
 
       if not robot.brain.data.statuses?
-        twit.getUserTimeline {'screen_name':'loudbot', 'count': '15'}, (err, data) ->
+        twit.getUserTimeline {'screen_name':'loudbot', 'count': count}, (err, data) ->
           if err
             msg.send "Encountered a problem twitter searching :(", inspect err
             return
 
           if data
-            num = getRandom(15)
+            num = getRandom(count)
             robot.brain.data.statuses = data
             robot.brain.emit 'save'
-            msg.send data[num].text
+            tweet = data[num].text
+            msg.send tweet.replace(/@[\w]+ /, '')
 
       else
-        num = getRandom(15)
+        num = getRandom(count)
         stats = robot.brain.data.statuses
-        msg.send stats[num].text
+        tweet = stats[num].text
+        msg.send tweet.replace(/@[\w]+ /, '')
