@@ -39,7 +39,7 @@ module.exports = (robot) ->
   twit = undefined
   myRobot = process.env.HUBOT_NAME 
 
-  robot.hear /(^[A-Z\W\_]+$)/, (msg) ->
+  robot.hear /(^[A-Z\s]+[\W]*$)/, (msg) ->
     unless auth.consumer_key
       msg.send "Please set the HUBOT_TWITTER_CONSUMER_KEY environment variable."
       return
