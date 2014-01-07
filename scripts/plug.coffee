@@ -10,10 +10,10 @@ request = require('request')
 module.exports = (robot) ->
   robot.respond /plug me/i, (msg) ->
     plugMe '', (url) ->
-      msg.send "tt url is: #{url}"
+      msg.send "plug.dj url is: #{url}"
 
   robot.respond /plug save (http:\/\/(www.)?plug.dj\/.*)/i, (msg) ->
-    ttMe msg.match[2], (url) ->
+    plugMe msg.match[2], (url) ->
       msg.send "plug url has been saved"
 
 plugMe = (query, cb) ->
