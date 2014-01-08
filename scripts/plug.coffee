@@ -13,7 +13,7 @@ module.exports = (robot) ->
       msg.send "plug.dj url is: #{url}"
 
   robot.respond /plug save (http:\/\/(www.)?plug.dj\/.*)/i, (msg) ->
-    plugMe msg.match[2], (url) ->
+    plugMe msg.match[1], (url) ->
       msg.send "plug url has been saved"
 
 plugMe = (query, cb) ->
