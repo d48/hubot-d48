@@ -1,9 +1,9 @@
 {
-  "name": "hosted-hubot",
+  "name": "slackbot-d48",
   "version": "2.4.8",
   "author": "GitHub Inc.",
   "keywords": "github hubot campfire bot",
-  "description": "A simple helpful Robot for your Company",
+  "description": "A simple helpful Robot for your Company using slack-hubot adapter",
   "licenses": [
     {
       "type": "MIT",
