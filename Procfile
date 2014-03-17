@@ -1,1 +1,1 @@
-app: bin/hubot -a talker -n horsie
+web: bin/hubot -a slack -n blackie
