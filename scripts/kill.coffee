@@ -8,5 +8,5 @@ deathImageUrl = "http://s.bebo.com/img/emoji/emoji-E410.png"
 
 module.exports = (robot) ->
   robot.respond /kill (.*)/i, (msg) ->
-    name = msg.match[2]
+    name = msg.match[1]
     msg.send "#{name} has been killed #{deathImageUrl}"
