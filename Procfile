@@ -1,1 +1,1 @@
-app: bin/hubot -a talker -n horsie
+app: bin/hubot -a irc -n horsebot
