@@ -27,7 +27,8 @@
     "request": "*",
     "brocabulary": "*",
     "ntwitter": "*",
-    "listenshtein": "0.0.0"
+    "listenshtein": "0.0.0",
+    "hubot-irc": "~0.2.1"
   },
   "engines": {
     "node": "0.8.14",
