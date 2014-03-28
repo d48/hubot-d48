@@ -23,7 +23,7 @@
     "jquery": "*",
     "htmlparser": "1.7.6",
     "soupselect": "0.2.0",
-    "cleverbot-node": "0.1.1",
+    "cleverbot-node": "0.1.2",
     "request": "*",
     "brocabulary": "*",
     "ntwitter": "*",
