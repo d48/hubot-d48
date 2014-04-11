@@ -30,7 +30,8 @@
     "listenshtein": "0.0.0",
     "hubot-irc": "~0.2.1",
     "cheerio": "~0.15.0",
-    "url": "~0.7.9"
+    "url": "~0.7.9",
+    "redis": "~0.10.1"
   },
   "engines": {
     "node": "0.8.14",
