@@ -19,6 +19,4 @@ module.exports = (robot) ->
       .http("http://cowsay.morecode.org/say")
       .query(format: 'text', message: msg.match[2])
       .get() (err, res, body) ->
-        msg.send '```'
         msg.send body
-        msg.send '```'
