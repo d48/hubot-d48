@@ -1,1 +1,1 @@
-web: bin/hubot -a slack -n blackie
+web: bin/hubot -a slack -n slackie
