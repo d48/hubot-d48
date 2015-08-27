@@ -1,1 +1,1 @@
-web: bin/hubot -a slack -n slackie
+web: bin/hubot -a slack -n horse
