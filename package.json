@@ -1,9 +1,9 @@
 {
-  "name": "hosted-hubot",
+  "name": "slackbot-d48",
   "version": "2.4.8",
   "author": "GitHub Inc.",
   "keywords": "github hubot campfire bot",
-  "description": "A simple helpful Robot for your Company",
+  "description": "A simple helpful Robot for your Company using slack-hubot adapter",
   "licenses": [
     {
       "type": "MIT",
@@ -15,23 +15,26 @@
     "url": "https://github.com/github/hubot.git"
   },
   "dependencies": {
-    "hubot": "2.5.1",
     "hubot-scripts": ">= 2.4.1",
-    "optparse": "1.0.3",
     "hubot-talker": "*",
     "jsdom": "*",
     "jquery": "*",
-    "htmlparser": "1.7.6",
-    "soupselect": "0.2.0",
     "cleverbot-node": "0.1.2",
     "request": "*",
+    "bang": "~1.0.4",
     "brocabulary": "*",
+    "htmlparser": "1.7.6",
+    "hubot": "^2.9.3",
+    "hubot-slack": "^3.0.0",
     "ntwitter": "*",
     "listenshtein": "0.0.0",
     "hubot-irc": "~0.2.1",
     "cheerio": "~0.15.0",
     "url": "~0.7.9",
-    "redis": "~0.10.1"
+    "redis": "~0.10.1",
+    "optparse": "1.0.3",
+    "shellwords": "~0.1.0",
+    "soupselect": "0.2.0"
   },
   "engines": {
     "node": "0.8.14",

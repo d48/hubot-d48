@@ -10,7 +10,7 @@
 # Commands:
 #   Hello or Good Day make hubot say hello to you back
 #   Good Morning makes hubot say good morning to you back
-robotUsername = 'horsie'
+robotUsername = 'horse'
 
 hellos = [
     "Well hello there, %",
