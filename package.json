@@ -34,10 +34,11 @@
     "redis": "~0.10.1",
     "optparse": "1.0.3",
     "shellwords": "~0.1.0",
-    "soupselect": "0.2.0"
+    "soupselect": "0.2.0",
+    "are-we-there-yet": "*"
   },
   "engines": {
-    "node": "0.10.12",
-    "npm": ">=1.1.x"
+    "node": "^0.10.12",
+    "npm": "^1.2.32"
   }
 }
